@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <title>Ganića kula – kulturno nasljeđe Rožaja</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google font (nije obavezno ali ljepše izgleda) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #f5f5f7;
+            --bg-alt: #ffffff;
+            --primary: #16697a;
+            --primary-soft: #e5f3f6;
+            --accent: #f1a208;
+            --text: #222222;
+            --muted: #666666;
+            --radius-lg: 18px;
+            --radius-xl: 26px;
+            --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top left, #fdfcfb 0, #e0edf4 40%, #f5f5f7 100%);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NAVBAR */
+
+        /* ===== HEADER & NAVBAR ===== */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(22, 105, 122, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.7rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- Logo --- */
+.brand img {
+  height: 28px;
+  width: auto;
+  display: block;
+  transition: transform 0.2s ease;
+  
+}
+
+.brand img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Navigacija --- */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.6rem;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #16697a;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+nav li a:hover {
+  background: rgba(22, 105, 122, 0.1);
+  color: #0f3f4a;
+}
+
+nav li a.active {
+  background: #16697a;
+  color: white;
+}
+
+/* --- Hamburger dugme --- */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: #16697a;
+  transition: color 0.2s ease;
+}
+
+.nav-toggle:hover {
+  color: #0f3f4a;
+}
+
+/* ===== MOBILNI DIZAJN ===== */
+@media (max-width: 850px) {
+  .nav-inner {
+    flex-wrap: wrap;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.98);
+    border-top: 1px solid rgba(22, 105, 122, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.3s ease forwards;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0.7rem 0;
+    gap: 0;
+  }
+
+  nav li a {
+    display: block;
+    padding: 0.8rem 1rem;
+    width: 100%;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(22, 105, 122, 0.08);
+  }
+
+  nav li a:hover {
+    background: rgba(22, 105, 122, 0.12);
+  }
+
+  nav li:last-child a {
+    border-bottom: none;
+  }
+}
+
+/* --- Efekat pojavljivanja menija --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+        /* HERO */
+
+        .hero {
+            max-width: 1100px;
+            margin: 1.5rem auto;
+            padding: 1.5rem 1.25rem 0.5rem;
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);
+            gap: 1.8rem;
+            align-items: center;
+        }
+
+        .hero-text {
+            padding: 1.5rem;
+            border-radius: var(--radius-xl);
+            background: linear-gradient(135deg, rgba(22, 105, 122, 0.08), rgba(241, 162, 8, 0.04));
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(148, 163, 184, 0.4);
+        }
+
+        .hero-eyebrow {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: .16em;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .hero-title {
+            margin-top: 0.4rem;
+            font-size: clamp(1.7rem, 3vw, 2.2rem);
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            margin-top: 0.75rem;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.9rem;
+        }
+
+        .badge {
+            font-size: 0.8rem;
+            padding: 0.2rem 0.75rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px dashed rgba(148, 163, 184, 0.6);
+        }
+
+        .hero-image-card {
+            position: relative;
+            background: var(--bg-alt);
+            border-radius: var(--radius-xl);
+            padding: 1rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            overflow: hidden;
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            border-radius: 18px;
+            border: 1px dashed rgba(148, 163, 184, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            color: var(--muted);
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .hero-tag {
+            position: absolute;
+            top: 0.9rem;
+            right: 0.9rem;
+            background: rgba(22, 105, 122, 0.97);
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.3rem 0.75rem;
+            border-radius: 999px;
+        }
+
+        /* SECTIONS */
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto 3rem;
+            padding: 0 1.25rem 3rem;
+        }
+
+        section {
+            margin-top: 2.5rem;
+        }
+
+        .section-card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: var(--radius-xl);
+            padding: 1.75rem 1.5rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(148, 163, 184, 0.45);
+        }
+
+        .section-header {
+            margin-bottom: 1rem;
+        }
+
+        .section-kicker {
+            font-size: 0.8rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .section-title {
+            margin: 0.25rem 0 0;
+            font-size: 1.35rem;
+        }
+
+        .section-subtitle {
+            margin-top: 0.35rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2.6fr);
+            gap: 1.5rem;
+        }
+
+        .text-block p {
+            margin: 0 0 0.75rem;
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        .quote {
+            margin: 0.9rem 0;
+            padding: 0.75rem 1rem;
+            border-left: 3px solid var(--accent);
+            background: #fffaf0;
+            font-size: 0.9rem;
+        }
+
+        .quote small {
+            display: block;
+            margin-top: 0.25rem;
+            color: var(--muted);
+        }
+
+        /* GALLERY */
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 0.9rem;
+        }
+
+        .gallery-item {
+            background: var(--bg);
+            border-radius: 14px;
+            padding: 0.4rem;
+            border: 1px dashed rgba(148, 163, 184, 0.8);
+            cursor: pointer;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+            border-color: var(--primary);
+        }
+
+        .gallery-item img {
+            border-radius: 10px;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+        }
+
+        .gallery-caption {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-top: 0.3rem;
+        }
+
+        .tag-chip {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            background: rgba(15, 23, 42, 0.72);
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 999px;
+        }
+
+        /* LIGHTBOX */
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.86);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 80;
+            padding: 1.5rem;
+        }
+
+        .lightbox.visible {
+            display: flex;
+        }
+
+        .lightbox-inner {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .lightbox-image-wrapper {
+            background: #020617;
+            padding: 0.75rem;
+            border-radius: 18px;
+        }
+
+        .lightbox-image-wrapper img {
+            max-height: 70vh;
+            margin: 0 auto;
+            border-radius: 14px;
+        }
+
+        .lightbox-caption {
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+            color: #e5e7eb;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(15, 23, 42, 0.8);
+            color: #e5e7eb;
+            border: 1px solid rgba(148, 163, 184, 0.7);
+            border-radius: 999px;
+            padding: 0.2rem 0.7rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        /* FOOTER */
+
+        footer {
+  background: linear-gradient(135deg, rgba(22, 105, 122, 0.95), rgba(255, 255, 255, 0.9));
+  color: white;
+  padding: 2.2rem 1.5rem 2rem;
+  margin-top: 3rem;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-credits h3 {
+  font-weight: 400;
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+  letter-spacing: 0.3px;
+}
+
+.footer-credits span {
+  font-weight: 600;
+  color: #fff9e6;
+}
+
+.footer-line {
+  width: 90%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 1.2rem 0;
+}
+
+.footer-legal {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-legal strong {
+  color: #fff9e6;
+}
+
+.footer-subtitle {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: #fefcfb;
+  letter-spacing: 0.3px;
+  font-weight: 300;
+}
+
+@media (max-width: 700px) {
+  footer {
+    padding: 1.8rem 1rem 2rem;
+  }
+
+  .footer-credits h3 {
+    font-size: 0.9rem;
+  }
+
+  .footer-subtitle {
+    font-size: 0.8rem;
+  }
+}
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 850px) {
+            .hero {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .hero-image-card {
+                order: -1;
+            }
+
+            .two-column {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        @media (max-width: 720px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 100%;
+                background: rgba(245, 245, 247, 0.97);
+                border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+                display: none;
+            }
+
+            nav.open {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0.4rem 1.25rem 0.75rem;
+            }
+
+            nav li a {
+                padding-left: 0;
+            }
+
+            .hero {
+                padding-top: 0.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-inner">
+        <div class="brand">
+            <a href="https://fzm.me/v/index.php/naslovnal"><img src="fond.png" alt=""></a>
+        </div>
+
+        <button class="nav-toggle" aria-label="Meni">&#9776;</button>
+
+        <nav>
+            <ul>
+                <li><a href="#ganica-kula" class="nav-link active">Ganića kula</a></li>
+                <li><a href="#galerija-ganicka" class="nav-link">Galerija</a></li>
+                <li><a href="#stare-kuce" class="nav-link">Stare kuće</a></li>
+                <li><a href="#materijali-tehnike" class="nav-link">Materijali</a></li>
+                <li><a href="#turizam" class="nav-link">Turizam</a></li>
+                <li><a href="#islamsko-nasljece" class="nav-link">Islamsko nasljeđe</a></li>
+                <li><a href="#zastita" class="nav-link">Zaštita baštine</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" id="pocetak">
+    <div class="hero-text">
+        <div class="hero-eyebrow">Kulturno blago Rožaja</div>
+        <h1 class="hero-title">Kule Rožaja kao afirmacija kulturnog blaga ovog kraja</h1>
+        <p class="hero-subtitle">
+            Priča o Ganića kuli, starim rožajskim kućama i kulama, njihovoj ljepoti, značaju i borbi
+            da opstanu uprkos zubu vremena i nemaru ljudi.
+        </p>
+        <div class="hero-badges">
+            <span class="badge">Zavičajni muzej</span>
+            <span class="badge">Islamsko kulturno nasljeđe</span>
+            <span class="badge">Stare kuće i kule</span>
+        </div>
+    </div>
+    <div class="hero-image-card">
+        <div class="hero-tag">Kule</div>
+        <!-- HERO SLIKA – promijeni src da staviš veliku fotografiju Ganića kule -->
+        <div class="hero-image-placeholder">
+            <p>
+               <img src="hadzijalijagic.png" alt="">
+            </p>
+        </div>
+    </div>
+</section>
+
+<main>
+
+    <!-- 1. GANIĆA KULA - KULTURNO BLAGO ROŽAJA -->
+    <section id="ganica-kula">
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-kicker">Istorijski spomenik</div>
+                <h2 class="section-title">Ganića kula – kulturno blago Rožaja</h2>
+            </div>
+            <div class="two-column">
+                <div class="text-block">
+                    <p>
+                        Ganića kula je istorijski i kulturni spomenik u Rožajama. To je srednjovjekovna kula koja predstavlja
+                        važan dio kulturnog nasljeđa ovog kraja. Kula je povezana sa tradicijom, arhitekturom i istorijom
+                        Rožaja i okoline.
+                    </p>
+                    <p>
+                        Ganića kula je izgrađena tokom 18. vijeka i dio je tradicionalne građevinske baštine Rožaja.
+                        Iako danas djeluje pomalo zapušteno, ova kula je simbol jednog vremena i služi kao podsjetnik na
+                        prošlost i način života koji je postojao u tom periodu. Kule kao što je Ganića kula često su imale
+                        važnu odbrambenu funkciju, štiteći lokalne zajednice od potencijalnih napada.
+                    </p>
+                    <p>
+                        Danas, Ganića kula predstavlja značajan kulturni spomenik, koji privlači posjetioce interesovane
+                        za istoriju, arhitekturu i tradiciju Rožaja. Kao dio kulturnog blaga Crne Gore, ona doprinosi
+                        razumijevanju i očuvanju lokalne istorije i identiteta.
+                    </p>
+                    <p>
+                        Inače valja napomenuti da je Zavičajni muzej u Rožajama osnovan je 1991. godine. Aktivnost na izgradnji novog objekta za potrebe Muzeja otpočela je 2001. godine. po uzoru na nekadašnju “Ganića kulu” iz 1798. godine, spomenik tradicionalnog graditeljstva rožajskog kraja.  Ovaj muzej je I njegov fond je veoma očuvan, izuzetne i bogate izrade, I po  tehnici,  i po materijalu.  Njime je predstavljen narodni život, kultura stanovanja, odijevanja, umjetnost, zanati rožajskog podneblja, u duhu islamske tradicije. Zavičajni muzej Ganića kula nalazi se na dva minuta hoda od glavnog trga u Rožajama koja služi kao replica glavnoj kuli koja je udaljena na nekih 700 metara od nje.  Donji dio kule je utvrđen i napravljen je od kamena, dok je na vrhu kule (na drugom spratu) postavljen drveni dio, čardak, koji je služio za stanovanje. Danas je ova kula pretvorena u etnografski muzej. 
+                    </p>
+                    <p>
+                        U prilogu ovog teksta možete pogledati footgrafije kako Zavičajnog muzeja Ganića kule, kao I samu Ganića kulu u ruševinama kroz stare I nove fotografije u procesu izgradnje i aktulno stanje kada je obnovljena I vraćena u prvobitni autentični izgled.
+                    </p>
+                </div>
+                <div>
+                    <div class="section-subtitle">
+                        Fotografije Zavičajnog muzeja Ganića kule i originalne kule prije i poslije obnove.
+                    </div>
+                    <div class="gallery-grid" id="galerija-ganicka">
+                        <!-- Svaku sliku samo zamijeni src i po želji alt -->
+
+                        <figure class="gallery-item" data-caption="Zidine oronule Ganića kule u Rožajama">
+                            <span class="tag-chip">Prije obnove</span>
+                            <img src="ZidineGK.jpg" alt="Zidine oronule Ganića kule u Rožajama">
+                            <figcaption class="gallery-caption">
+                                Zidine oronule Ganića kule u Rožajama, arhiv prof. mr Halila Markišića
+                            </figcaption>
+                        </figure>
+                        <figure class="gallery-item" data-caption="Zidine oronule Ganića kule u Rožajama">
+                            <span class="tag-chip">Prije obnove</span>
+                            <img src="GK2.jpg" alt="Zidine oronule Ganića kule u Rožajama">
+                            <figcaption class="gallery-caption">
+                                Stara fotografija Ganića kule u Rožajama, arhiva prof. mr Halila Markišića
+                            </figcaption>
+                        </figure>
+                        <figure class="gallery-item" data-caption="Zidine oronule Ganića kule u Rožajama">
+                            <span class="tag-chip">Prije obnove</span>
+                            <img src="GK3.jpg" alt="Zidine oronule Ganića kule u Rožajama">
+                            <figcaption class="gallery-caption">
+                                Stara fotografija Ganića kule u Rožajama, arhiva prof. mr Halila Markišića
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Zidine oronule Ganića kule u Rožajama">
+                            <span class="tag-chip">Prije obnove</span>
+                            <img src="GK4.jpg" alt="Zidine oronule Ganića kule u Rožajama">
+                            <figcaption class="gallery-caption">
+                                Zidine oronule Ganića kule u Rožajama, arhiv prof. mr Halila Markišića
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Stara fotografija Ganića kule u Rožajama">
+                            <span class="tag-chip">Arhivska</span>
+                            <img src="GK5.jpg" alt="Stara fotografija Ganića kule u Rožajama">
+                            <figcaption class="gallery-caption">
+                                Stara fotografija Ganića kule u Rožajama, arhiv prof. mr Halila Markišića
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Zavičajni muzej Ganića kula sa zadnje strane">
+                            <span class="tag-chip">Muzej</span>
+                            <img src="GK6.jpg" alt="Zavičajni muzej Ganića kula sa zadnje strane">
+                            <figcaption class="gallery-caption">
+                                Zavičajni muzej Ganića kula – zadnja strana
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Zavičajni muzej Ganića kula sa centralne strane">
+                            <span class="tag-chip">Muzej</span>
+                            <img src="GK7.jpg" alt="Zavičajni muzej Ganića kula sa centralne strane">
+                            <figcaption class="gallery-caption">
+                                Zavičajni muzej Ganića kula – centralna strana
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Fotografije prije restauracije Ganića kule – kameni zid">
+                            <span class="tag-chip">Prije</span>
+                            <img src="GK9.jpg" alt="Fotografije prije restauracije Ganića kule – kameni zid">
+                            <figcaption class="gallery-caption">
+                                Fotografije prije restauracije Ganića kule – kameni zid
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Fotografije prije restauracije Ganića kule">
+                            <span class="tag-chip">Prije</span>
+                            <img src="GK8.jpg" alt="Fotografije prije restauracije Ganića kule">
+                            <figcaption class="gallery-caption">
+                                Fotografije prije restauracije Ganića kule
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Fotografije prije restauracije Ganića kule – zadnja strana">
+                            <span class="tag-chip">Prije</span>
+                            <img src="GK10.jpg" alt="Fotografije prije restauracije Ganića kule – zadnja strana">
+                            <figcaption class="gallery-caption">
+                                Fotografije prije restauracije Ganića kule – zadnja strana
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Fotografije prije restauracije Ganića kule – bočna strana">
+                            <span class="tag-chip">Prije</span>
+                            <img src="GK11.jpg" alt="Fotografije prije restauracije Ganića kule – bočna strana">
+                            <figcaption class="gallery-caption">
+                                Fotografije prije restauracije Ganića kule – bočna strana
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Finalni autentični izgled restaurirane Ganića kule">
+                            <span class="tag-chip">Poslije</span>
+                            <img src="GK12.jpg" alt="Finalni autentični izgled restaurirane Ganića kule">
+                            <figcaption class="gallery-caption">
+                                Finalni autentični izgled restaurirane Ganića kule
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Finalni autentični izgled restaurirane Ganića kule sa bočne strane">
+                            <span class="tag-chip">Poslije</span>
+                            <img src="GK13.jpg" alt="Finalni autentični izgled restaurirane Ganića kule sa bočne strane">
+                            <figcaption class="gallery-caption">
+                                Finalni autentični izgled restaurirane Ganića kule – bočna strana
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Finalni autentični izgled restaurirane Ganića kule sa pogledom na dva manja prozora I balkonom">
+                            <span class="tag-chip">Poslije</span>
+                            <img src="GK14.jpg" alt="Finalni autentični izgled restaurirane Ganića kule sa pogledom na dva manja prozora I balkonom">
+                            <figcaption class="gallery-caption">
+                                Finalni autentični izgled restaurirane Ganića kule sa pogledom na dva manja prozora I balkonom
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Finalni autentični izgled restaurirane Ganića kule – pogled na dva manja prozora i balkon">
+                            <span class="tag-chip">Detalj</span>
+                            <img src="GK16.jpg" alt="Finalni autentični izgled restaurirane Ganića kule – vrata ulazna">
+                            <figcaption class="gallery-caption">
+                                Finalni autentični izgled restaurirane Ganića kule – vrata ulazna
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Halka na novim vratima Ganića kule">
+                            <span class="tag-chip">Detalj</span>
+                            <img src="GK15.jpg" alt="Halka na novim vratima Ganića kule">
+                            <figcaption class="gallery-caption">
+                                Halka na novim vratima Ganića kule
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Unutrašnji izgled sobe u Ganića kuli">
+                            <span class="tag-chip">Enterijer</span>
+                            <img src="GK17.jpg" alt="Unutrašnji izgled sobe u Ganića kuli">
+                            <figcaption class="gallery-caption">
+                                Unutrašnji izgled sobe u Ganića kuli
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. AHMET ADEMAGIĆ – GANIĆA KULA U ROŽAJAMA -->
+    <section id="ahmet-ademagic">
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-kicker">Zavičajni motiv</div>
+                <h2 class="section-title">Ahmet Ademagić: Ganića kula u Rožajama</h2>
+            </div>
+            <div class="two-column">
+                <div class="text-block">
+                    <p>
+                        U svom slikarskom radu – zavičajnog motiva – imao sam dosta lijepih motiva, ali Ganića kula je bila i ostala moja ‘‘slikarska opsesija’’.
+Kada analiziram šta je to što me privlači taj motiv, mislim da ima toga mnogo, ali su dva primarna – prvo ambijentalnost same kule i drugo vrijeme karakteristične originalnosti izgleda sa čardakom što druge rožajske kule nemaju. Prirodni fenomen dva klika, a iznad njih Ganića krši kao majka koja je zaogrnula svoju djecu da joj neozebu dok oni stoje ponosito na straži iznad kule i budno prate život u kuli, oko kule i prolaznost ljudi i njihovog života.
+Druga vrijednost je livada i bašta sa voćnjakom sve do bistrog, hladnog i brzog, žuboravog Ibra – jer se voda sa Ibra koristila za piće sve do 1960. godine. Naravno da je mali broj domaćinstava tada imao svoje česme i bunare. (I danas pijemo vodu Ibra ali kroz drugu organizaciju života). Taj prostor zelenila bašte, livade, voćnjaka isticala je još više vitkost Ganića kule, a naročito završni dio kule–čardaka, tako da je čovjek osjećao sebe kao jednim malim dijelom te cjeline koja ga okružuje.
+
+                    </p>
+                    <p>
+                        Ljepoti kule je najviše doprineo ‘‘čardak sa ćoškom’’ davši joj vitkost i originalnost. A da bih potvrdio ovo moje mišljenje navešću neke pisane podatke o Rožajama, Ganićima i Ganića kuli. O tome kako su nas drugi vidjeli i kako su vrednovali ono što smo imali, a nijesmo znali, ili nijesmo htjeli da sačuvamo.
+Jovan Krunić, poznati arhitekta i ambijentolog, zapisao je o Rožajama 1951. godine:
+‘‘Rožaje grad muzej u divnom predjelu livada i šuma. Grad kome daju karakter brvnare koje je i posljednji majstor oblikovao – dao svoj pečat: patinu. Grad isto tako jedne svojstvene urbanističke kompozicije; ne jedna prosta cjelina, nego zbir cjelina, djevičanski čist, jedva načet početkom propadanja pojedinačnih kuća ili kvarenja novom izgradnjom. Tu je izgubljena velika vrijednost, čiju štetu u najvećem stepenu snose sami žitelji varoši koji uostalom i snose glavnu krivicu za takav razvoj svoje kasabe.’’
+Koliko god da je bio nadležan i plaćen da djeluje Savezni institut za zaštitu nasljeđenih spomenika, i koliko god da je taj Institut bio pravovremeno upozoren od Krunića, sve to nije imalo težinu jedne izravne brige same varoši za svoju vlastitu sudbinu. Zbog takvog odnosa prema baštini danas imamo jednu prazninu više u inventaru objekata svjetske organizacije UNESCO.
+
+                    </p>
+                    <p>
+                        Ganića kulu u svom radu ‘‘Varoš Rožaje’’ pominje i dr Milisav Lutovac:
+‘‘Poseban je tip Rožajske kuće Ganića kula, za koju se kaže da je građena sedam godina prije Karađorđevog ustanka. Dva boja su od kamena, a treći od debelih i vrlo čvrstih greda. Služila je i kao utvrđenje ispod pećine važnog odbrambenog uporišta.’’
+O Ganića kuli pisao je i Pajazit Hasić, inžinjer građevinarstva u Rožajskom zborniku iz 1984. godine. On je veoma detaljno i stručno opisao enterijer i eksterijer Ganića kule i tako sačuvao bitne detalje za njenu eventualnu rekonstrukciju.
+Dr Safet Nurković takođe u Rožajskom zborniku ali iz 1987. godine zapaža i konstatuje o nebrizi i nehatu prema objektima materijalne kulture pa kaže:
+‘‘…ni postojeća prostorno-urbanistička praksa u Rožajama do 20. februara 1987. godine nije imala ni jedan objekat registrovan kao spomenik kulture. Nasuprot velikog bogatstva takvih objekata, potvrđuje opštu nebrigu prema graditeljskoj i kulturnoj baštini u ovom gradu.’’
+Na inicijativu tadašnjeg SIZ–a kulture iz Rožaja preduzeta je akcija na zaštiti spomeničkog blaga Rožaja i urađen je predlog za zaštitu Ganića kule. Tako je Republički zavod za zaštitu spomenika kulture spomenutog 20. februara 1987. godine donio Rješenje o uvođenju spomenika kulture Ganića kule u registar spomenika kulture Socijalističke Republike Crne Gore. U Obrazloženju koje potpisuje direktor Čedomir Marković piše:
+‘‘Ganića kula je tipičan spomenik tradicionalnog graditeljstva, koji je zadržao osnovni oblik od doba postanka. Kula je locirana na strategijski povoljnom položaju i imala je namjenu stanovanja a i odbrane. Sastoji se od podruma, prizemlja i sprata koji su ozidani od lomljenog kamena, dok je drugi sprat tzv. ‘‘čardak’’ napravljen od drveta. Kula je četvrtaste osnove sa krovom na četiri vode. Zbog svojih pomenutih kvaliteta objekat se uvodi u registar zaštićenih nepokretnih spomenika kulture, a biće revitalizovana u Zavičajni muzej i Arhiv.’’
+O Ganića kuli sam zapisao neke podatke od potomaka Ganića. Citiraću ovom prilikom riječi Merime Ganić–Zejnelagić:
+‘‘Kula Ganića je pravljena tri godine prije Karađorđa. Pravio ju je carski vezir. U to vrijeme ratovali su sa Klimentama. Vezir je napravio i tunel na Sarandži. Taj tunel se zove Kadrijin čardak. Postoje danas zidine tog čardaka. Ganića kula je pravljena za vojsku a dokaz za to su puškarnice na četvrtom spratu. Nakon vezirovog odlaska za Skadar kulu su otkupili braća Ganići (Selim i Alija). Njihove tadašnje kuće su se nalazile kod Kučanske džamije. Selim Ganić je bio deda Rustema Ganića a Rustem je moj deda (Merimin, prim.autora). Debljina zidova kule je bila 1,2 metra i imala je četiri sprata. U malter za gradnju kule je dodavana so. Zadnji sprat je bio od bukovih brvana. Tu je bio ćošak i puškarnica. Pendžeri na kuli su bili mali, ali udubljenje za prozor je bilo veliko. U tom udubljenju je moglo da se sjedi. Na pendžerima su se nalazile šipke. Pekara je bila na četvrtom spratu i zagrijavala je čitav sprat. Lijepo je izgledala. Na njoj su se nalazili zemljani lončevi, koji su ukrašavali taj dio kuće. Ulazna vrata su bila drvena i zatvarala su se mandalom…’’
+
+                    </p>
+                    <p>
+                        Velika je odgovornost onih ljudi koji su bili u službi i na vlasti u tom periodu a dozvolili su propadanje Ganića kule i odizimanje prostora oko Ganića kule – predajući to zemljište za izgradnju privatnih kuća, koje su toliko oduzimale ambijent te kule dok joj ta novogradnja nije oduzela cjelokupni prostor.
+Nebrigom, namjerno ili nenamjerno onih koji su bili na vlasti srušena je jedna ‘‘ljepotica među rožajskim kulama’’ koja je imala svoju originalnu istoriju, a vlasnike hrabre, mudre i plemenite ljude, koji su znali i umjeli da očuvaju kulu od mnogih napadača, ali nijesu je mogli sačuvati za nas i naše potomke od onih koji nijesu bili naučeni da uvide njenu ljepotu i njen značaj.
+Što se tiče pojave likvidacije objekata, kako graditeljske tako i kulturne baštine, možemo reći da je do sada bila veoma istaknuta, a odvijala se najprije u likvidaciji pojedinih vrijednih objekata po cijelom gradu. Tako je kula Ademagića porušena davne 1958. godine navodno zbog urbanizacije gradskog jezgra, a Kurtagića kula je srušena 2013. godine. U tom periodu u Rožajama je u potpunosti uništena Stara (Gornja) čaršija te je izgubila ranije značenje. Do danas su porušene brojne kuće, kule, avlije, dućani… U Rožajama danas ima tek još nekoliko kula: Zejnelagića, Hadžialijagića, Kardovića, Lubodera…
+Umjesto da se kula sačuvala i revitalizovala na drugoj lokaciji je sagrađen je nevješto objekat koji samo može da asocira na Ganića kulu. Ružno je da se imitira i želi narodu podvaliti izgradnjom ‘‘čardaka’’ na ivici platoa školskog dvorišta ‘‘Mustafe Pećanina’’ da je to Ganića kula. Čak ni taj falsifikat ‘‘Ganića kule’’ nije postavljen kako je izgledala kula, jer je ćošak Ganića kule bio okrenut zapadu a na ovom objektu je prema istoku. Tužno je ali istinito.
+
+                    </p>
+
+                    <p>Mnogo toga lijepog se može napisati o nama Rožajcima i Rožajkama, ali i o našoj nemarnosti, o neznanju da sačuvamo ono što je vrijedno i lijepo kao odraz naše kulture. Svjedoci smo da su u Plavu naši sunarodnici sačuvali Redžepagića kulu i time dokazali da imaju volje i znanja da čuvaju materijalnu kulturu svoga grada, što se za nas u Rožajama ne može reći te nažalost, propadaju i posljednji ostaci, fosili srednjovjekovnog stana kule. A Ganića kula umjesto da je pretvorena u živi muzej, napuštena je i odbrojava posljednje godine, a možda i mjesece svog trajanja. A Ganića kula – koje više nema, ostala je na fotografijama i slikama zavičajnih slikara. Doduše zubu vremena odolijevaju još njene zidine, te se nadam da će neko iz generacija mlađih Rožajaca i Rožajki uvidjeti njen značaj i revitalizovati kulu kao vidikovac a ostale prostorije iskoriste za zavičajni muzej i arhiv.
+Ljudski je nadati se u bolje sjutra.
+</p>
+
+                </div>
+                <div>
+                    <figure class="gallery-item" data-caption="Ganića kula - Rožaje, akademski slikar A. Ademagić">
+                        <span class="tag-chip">Slikarsko djelo</span>
+                        <img src="aldemar.jpg" alt="Ganića Kula -Rožaje, akademski slikar A. Ademagić">
+                        <figcaption class="gallery-caption">
+                            Ganića Kula – Rožaje, akademski slikar A. Ademagić
+                        </figcaption>
+                    </figure>
+
+                    <div class="quote">
+                        ‘‘Rožaje grad muzej u divnom predjelu livada i šuma. Grad kome daju karakter brvnare koje je i
+                        posljednji majstor oblikovao – dao svoj pečat: patinu...’’
+                        <small>Jovan Krunić, arhitekta i ambijentolog (1951.)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. STARE KUĆE ROŽAJA -->
+    <section id="stare-kuce">
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-kicker">Stari ambijenti</div>
+                <h2 class="section-title">Stare kuće Rožaja kao dio identiteta</h2>
+            </div>
+            <div class="two-column">
+                <div class="text-block">
+                    <p>
+                        Stare kuće Rožaja, kao i u mnogim djelovima Crne Gore, predstavljaju ključni element kulturnog
+                        identiteta ovog kraja. Tradicionalna arhitektura Rožaja nosi sa sobom bogatstvo kulturnog nasljeđa,
+                        i ovi objekti su od posebne važnosti za razumijevanje lokalne istorije, običaja i života u prošlim
+                        vremenima.
+                    </p>
+                    <p>
+                        Stare kuće u Rožajama često su građene u tradicionalnom balkanskom stilu, koristeći lokalne
+                        materijale poput kamena, drva i cigle. Ove kuće su bile funkcionalne, a u isto vrijeme odražavale
+                        su neraskidivu povezanost sa prirodom i okolinom. Građene su u skladu sa potrebama porodica koje
+                        su u njima živjele, sa posebnim naglaskom na očuvanje topline tokom zime, s obzirom na planinsku
+                        klimu.
+                    </p>
+                    <p>
+                        Jedan od karakterističnih elemenata starih kuća u Rožajama su drvene verande, koje su bile prostori
+                        za odmor i okupljanje. Takođe, kuće su često imale prostrana ognjišta, koja su bila centralna tačka
+                        svakodnevnog života, a u mnogim slučajevima čak i simbolički centar kućnog života i odgoja.
+                    </p>
+                </div>
+                <div>
+                    <div class="gallery-grid">
+                        <figure class="gallery-item" data-caption="Stara kuća Rustema Lubodera, Rožaje">
+                            <span class="tag-chip">Stara kuća</span>
+                            <img src="rustem.jpg" alt="Stara kuća Rustema Lubodera, Rožaje">
+                            <figcaption class="gallery-caption">
+                                Stara kuća Rustema Lubodera, arhiv prof. mr Halila Markišića
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Stara kuća Husna Husića, Rožaje">
+                            <span class="tag-chip">Stara kuća</span>
+                            <img src="husno.jpg" alt="Stara kuća Husna Husića">
+                            <figcaption class="gallery-caption">
+                                Stara kuća Husna Husića, arhiv prof. mr Halila Markišića
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Kuća Metka Gusinjca, Rožaje">
+                            <span class="tag-chip">Stara kuća</span>
+                            <img src="metko.jpg" alt="Kuća Metka Gusinjca">
+                            <figcaption class="gallery-caption">
+                                Kuća Metka Gusinjca, arhiv prof. mr Halila Markišića
+                            </figcaption>
+                        </figure>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="turizam">
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-kicker">Kulturni identitet</div>
+                <h2 class="section-title">Kulturni identitet starih objekata (kuća-kula) u Rožajama</h2>
+            </div>
+            <div class="two-column">
+                <div class="text-block">
+                    <p>
+                        Stare kuće I kule u Rožajama odražavaju specifičnu životnu filozofiju i vrijednosti tog kraja, poput porodične povezanosti, zajedništva i poštovanja tradicije. Unutrašnjost kuća bila je jednostavna, ali sa puno pažnje posvećene funkcionalnosti i udobnosti. Zajednička je bila praksa da se kuće ne grade samo kao stambeni prostori, već i kao mjesta koja odražavaju socijalnu i porodičnu hijerarhiju. Svaka prostorija u kući imala je svoju funkciju i simboliku.
+                    </p>
+                    <p>
+                        Stare kuće takođe govore o specifičnom načinu života, poljoprivredi, stočarstvu i zanatima koji su dominirali u ovom mjestu. Mnoge od tih kuća su kroz godine postale simbol stabilnosti i opstanaka porodica i zajednica koje su u njima živjeli, koje se nažalost danas urušavaju I polako nestaju. 
+                                        </p>
+
+                    <p>Danas ove stare kuće Rožaja postaju sve važniji dio kulturnog turizma i inicijativa za očuvanje kulturnog nasljeđa. Iako mnoge od tih kuća možda nisu u najboljem stanju zbog godine izgradnje i promjena u društvenim i ekonomskim uslovima, nastoji se da se očuvaju kao kulturni spomenici. Njihovo očuvanje predstavlja važnu misiju za lokalne vlasti, ali i za sve one koji žele da sačuvaju bogatstvo tradicije i istorije.</p>
+                    <p>Za opštinu Rožaje ovu zajednicu, stare kuće nisu samo objekti one su središta sjećanja, identiteta i povezanosti sa prošlim generacijama. Mnoge porodice u Rožajama imaju jake emocionalne i porodične veze sa starim kućama koje su dio njihovih korjena.
+                        U krajnjoj liniji, stare kuće Rožaja nisu samo fizičke strukture, već čuvaju bogatstvo kulture, tradicije i vrijednosti koje se prenose s generacije na generaciju. One su odraz otpornosti i prilagodljivosti ljudi ovog kraja, kao i njihovog trajnog poštovanja prema svom nasljeđu.
+                        </p>
+                </div>
+                <div>
+                    <div class="gallery-grid">
+                        <figure class="gallery-item" data-caption="Stara kuća Feleća, stari dio grada">
+                            <span class="tag-chip">Stara kuća</span>
+                            <img src="felec.jpg" alt="Stara kuća Feleća, stari dio grada">
+                            <figcaption class="gallery-caption">
+                                Stara kuća Feleća, stari dio grada
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Stara kuća Hadžića u Rožajama">
+                            <span class="tag-chip">Stara kuća</span>
+                            <img src="hadzic.jpg" alt="Stara kuća Hadžića u Rožajama">
+                            <figcaption class="gallery-caption">
+                                Stara kuća Hadžića u Rožajama
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Kučanska džamija – jedna od najstarijih džamija u Crnoj Gori">
+                            <span class="tag-chip">Džamija</span>
+                            <img src="kucanska.jpg" alt="Kučanska džamija, jedna od najstarijih u Crnoj Gori">
+                            <figcaption class="gallery-caption">
+                                Kučanska džamija – jedna od najstarijih džamija u Crnoj Gori
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 4. GRAĐEVINSKI MATERIJALI I TEHNIKE -->
+    <section id="materijali-tehnike">
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-kicker">Tradicija gradnje</div>
+                <h2 class="section-title">Građevinski materijali i tehnike u izgradnji starih kuća</h2>
+            </div>
+            <div class="two-column">
+                <div class="text-block">
+                    <p>
+                        Kao što je već spomenuto, stari objekti u Rožajama često su građeni od lokalnih materijala, što ih čini još specifičnijim i povezanim sa ovim mjestom. Kamen je bio osnovni građevinski materijal za temelje i zidove, dok je drvo korišćeno za krovove i unutrašnje elemente, kao što su vrata, prozori i namještaj. Tehnike zidanja, ugradnje drvenih elemenata i krovišta bile su prilagođene specifičnostima klime, naročito oštrim zimama koje su karakteristične za Rožaje.
+                    </p>
+                    <p>
+                        Ovaj način gradnje bio je usklađen sa potrebama domaćinstava i specifičnostima okoline. Stare kuće bile su prilagođene da pruže zaštitu od hladnoće, a istovremeno su omogućavale dobar protok vazduha tokom toplih ljetnjih mjeseci.
+                    </p>
+                   
+                </div>
+                <div>
+                    <div class="gallery-grid">
+                        <figure class="gallery-item" data-caption="Hadžialijagića kula">
+                            <span class="tag-chip">Kula</span>
+                            <img src="hadzijalijagic.png" alt="Hadžialijagića Kula">
+                            <figcaption class="gallery-caption">
+                                Hadžialijagića Kula
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Kardovića kula">
+                            <span class="tag-chip">Kula</span>
+                            <img src="kardovic.png" alt="Kardovića Kula">
+                            <figcaption class="gallery-caption">
+                                Kardovića Kula
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TURIZAM KROZ KULTURNU BAŠTINU -->
+    <section id="turizam">
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-kicker">Kulturni turizam</div>
+                <h2 class="section-title">Turizam kroz kulturnu baštinu starih kuća</h2>
+            </div>
+            <div class="two-column">
+                <div class="text-block">
+                    <p>
+                        U posljednjim decenijama, stare kuće i kulturno nasljeđe Rožaja postaju sve važniji aspekt turizma. Posjetioci koji dolaze u Rožaje ne traže samo prirodne ljepote, već i dublje razumijevanje tradicije, istorije i svakodnevnog života ljudi tog kraja. Stare kuće često postajusastavni dio turističkih tura, muzeja na otvorenom ili etno sela, koja prikazuju život kakav je bio pre nekoliko vekova. Ovaj oblik turizma može doprineti održivom razvoju, pružajući ekonomske koristi lokalnim zajednicama i istovremeno očuvajući kulturne vrednosti. 
+                    </p>
+                    <p>
+                        Ove kuće, kao središta života, mogu postati inspiracija za buduće generacije, podsjećajući ih na važnost očuvanja tradicije i poštovanja svog nasljeđa.
+                    </p>
+                    
+                </div>
+                <div>
+                    <div class="gallery-grid">
+                        <figure class="gallery-item" data-caption="Zejnelagića kula">
+                            <span class="tag-chip">Kula</span>
+                            <img src="zejnelagic.png" alt="Zejnelagića Kula">
+                            <figcaption class="gallery-caption">
+                                Zejnelagića Kula
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Stara kuća Saipage Fetahovića – detalj">
+                            <span class="tag-chip">Detalj kuće</span>
+                            <img src="fetahovic.jpg" alt="Stara kuća Saipage Fetahovića – detalj">
+                            <figcaption class="gallery-caption">
+                                Stara kuća Saipage Fetahovića – detalj
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ISLAMSKO KULTURNO NASLJEĐE: KULE -->
+    <section id="islamsko-nasljece">
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-kicker">Islamsko nasljeđe</div>
+                <h2 class="section-title">Islamsko kulturno nasljeđe: kule</h2>
+            </div>
+            <div class="two-column">
+                <div class="text-block">
+                    <p>
+                        Pored običnih seoskih kuća, na selu su tek po negdje, a u gradovima češće građene i kule koje su pravljene od kamena. Kule su imale samo bogate porodice. Imale su više prostorija koje su bile opremljene minderima. Zidovi ovih kula su obično bili debljine do jedan metar i one su takođe, pored stanovanja imale ulogu porodičnog utvrđenja i zaštite od eventualnih napada pljačkaša.
+                    </p>
+                    <p>
+                        Zbog odbrane i bezbjednosti, kule su bile visoke, obično zidane sa prizemljem i dva sprata, a na
+                        sve strane kule su postojale puškarnice. Kule su pokrivane piramidom drvenog krova od šindre.
+                    </p>
+                    <p>
+                        Beogradski arhitekta Jovan Krunić, nakon istraživanja u plavsko-gusinjskom kraju sredinom
+                        20. vijeka, pisao je Saveznom zavodu za zaštitu spomenika kulture da se divni ambijent kuća
+                        brvnara i kula u oblasti Plavskog jezera zaštiti kao jedna kompleksna cjelina u kojoj se, srećno,
+                        susrijeću ljepota prirode – voda, planina, šume – i divna arhitektura brvnara u kojoj dominiraju
+                        čudne, u drvu izrezbarene džamije sa drvenim minaretima.
+                    </p>
+                    <p>
+                        U Rožajama postoji još nekoliko kula, a sve su osim Hadžialijagića kule u lošem stanju. Ambijent
+                        Ćerimagine kule je trajno uništen krčmljenjem zemljišta oko kule za izgradnju stambenih objekata,
+                        te je time propuštena prilika za pretvaranje kule sa okolnim zemljištem u muzejski kompleks na
+                        izvanrednoj lokaciji na vidikovcu sa pogledom na Kučansku mahalu.
+                    </p>
+                    
+                    <p>Najpoznatija rožajska kula, Ganića kula je najvjerovatnije sagrađena krajem 18. vijeka, znatno je oštećena od zemljotresa tako da je bila decenijama bez krova, oronula i izložena vremenskim nepogodama, prostor oko kule je uzurpiran. Tadašnja lokalna vlast je smatrala da više nema uslova za njeno renoviranje, te je odlučeno da se početkom posljednje decenije 20. vijeka po projektu stare Ganića kule izgradi kopija na drugoj lokaciji. Umjesto da je tadašnja lokalna vlast otkupila Kurtagića kulu sa velikom avlijom i adaptirala je u gradski muzej prišlo se izgradnji objekta koji tek samo podsjeća na Ganića kulu i nema historijsku vrijednost i naravno da nije mogao zamijeniti staru Ganića kulu koju su slikari uporno sliakali kako bi je otrgli od zaborava. Ganića kula se nalazi i rožajskom grbu kao podsjećanje na nekadašnju tradiciju i kulturu Bošnjaka Rožaja. Konačno je sredinom 2019. godine Ministarstvo kulture Crne Gore započelo finansiranje obnove Ganića kule – tačno 40 godina poslije zemljotresa, što bi se reklo: bolje ikad nego nikad.</p>
+                    <p>Propadaju i posljednje kule u Rožajama: Zejnelagića, Ćerimagina, Kardovića, Agića, Hadžića u Balotićima, Čolovića u Biševu i druge kule. Iako je posljednji trenutak da se zaštiti nekoliko preostalih kuća i kula, po tom pitanju se ne preduzima ništa iako bi lokalne vlasti trebale zajedno sa ministarstvima kulture i održivog razvoja i turizma da pokrenu inicijativu za izradu sveobuhvatnog projekta zaštite i obnove najljepših starih kuća i kula u Rožajama, Plavu, Gusinju i drugim gradovima Crne Gore.</p>
+                    <p>Tekst “<b>Islamsko kulturno nasljeđe: Kule</b>” preuzet sa web portala: www.avlija.me</p>
+                </div>
+                <div>
+                    <div class="gallery-grid">
+                        <figure class="gallery-item" data-caption="Stara Biševska džamija u selu Biševo kod Rožaja">
+                            <span class="tag-chip">Džamija</span>
+                            <img src="bisevo.jpg" alt="Stara Biševska džamija u selu Biševo kod Rožaja">
+                            <figcaption class="gallery-caption">
+                                Stara Biševska džamija u selu Biševo kod Rožaja
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Maketa Ganića kule Bećira Zećirovića">
+                            <span class="tag-chip">Maketa</span>
+                            <img src="metko.jpg" alt="Maketa Ganića kule Bećira Zećirovića">
+                            <figcaption class="gallery-caption">
+                                Maketa Ganića kule Bećira Zećirovića
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Stara kula Nezira Nurkovića u Seošnici kod Rožaja">
+                            <span class="tag-chip">Kula</span>
+                            <img src="nezeir.jpg" alt="Stara kula Nezira Nurkovića u Seošnici kod Rožaja">
+                            <figcaption class="gallery-caption">
+                                Stara kula Nezira Nurkovića u Seošnici kod Rožaja
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Stara kuća Ahmeta Tahirovića kod Rožaja">
+                            <span class="tag-chip">Stara kuća</span>
+                            <img src="ahmet.jpg" alt="Stara kuća Ahmeta Tahirovića kod Rožaja">
+                            <figcaption class="gallery-caption">
+                                Stara kuća Ahmeta Tahirovića kod Rožaja
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-item" data-caption="Kuća Redža Zekinog Hota u Bukovici kod Rožaja">
+                            <span class="tag-chip">Stara kuća</span>
+                            <img src="redzo.jpg" alt="Kuća Redža Zekinog Hota u Bukovici kod Rožaja">
+                            <figcaption class="gallery-caption">
+                                Kuća Redža Zekinog Hota u Bukovici kod Rožaja
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <p class="section-subtitle" style="margin-top:0.8rem;">
+                        Tekst “Islamsko kulturno nasljeđe: Kule” preuzet sa web portala: <strong>www.avlija.me</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- LIGHTBOX ZA SLIKE -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">Zatvori ✕</button>
+    <div class="lightbox-inner">
+        <div class="lightbox-image-wrapper">
+            <img id="lightboxImg" src="" alt="">
+        </div>
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-inner">
+      <div class="footer-credits">
+        <h3>Fotograf i video snimatelj: <span>Ismeta Hot</span></h3>
+        <h3>Sajt izradila: <span>Adaleta Ledinić</span></h3>
+        <h3>Foto i video materijal obradila: <span>Klodjana Hot</span></h3>
+      </div>
+  
+      <div class="footer-line"></div>
+  
+      <div class="footer-legal">
+        <p>
+          <strong>Iznijeti stavovi su isključivo odgovornost autora i/ili izdavača
+          i nužno ne izražavaju stavove Fonda.</strong>
+        </p>
+        <p class="footer-subtitle">
+          <em>Kule Rožaja kao afirmacija kulturnog blaga ovog kraja</em>
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+
+<script>
+    // Mobilni meni
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('header nav');
+
+    navToggle.addEventListener('click', () => {
+        nav.classList.toggle('open');
+    });
+
+    // Smooth scroll + aktivni link
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const targetId = link.getAttribute('href');
+            if (targetId.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(targetId);
+                if (target) {
+                    const top = target.getBoundingClientRect().top + window.scrollY - 70;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+                nav.classList.remove('open');
+            }
+        });
+    });
+
+    const sectionIds = ['ganica-kula', 'galerija-ganicka', 'stare-kuce', 'materijali-tehnike', 'turizam', 'islamsko-nasljece', 'zastita'];
+
+    window.addEventListener('scroll', () => {
+        const scrollPos = window.scrollY + 90;
+
+        let currentId = 'ganica-kula';
+        sectionIds.forEach(id => {
+            const el = document.getElementById(id);
+            if (el && el.offsetTop <= scrollPos) {
+                currentId = id;
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+        });
+    });
+
+    // Lightbox za slike
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('img');
+            const caption = item.getAttribute('data-caption') || item.querySelector('.gallery-caption')?.innerText || '';
+            if (img && img.getAttribute('src')) { // otvori samo ako ima sliku
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt || '';
+                lightboxCaption.textContent = caption;
+                lightbox.classList.add('visible');
+            }
+        });
+    });
+
+    lightboxClose.addEventListener('click', () => {
+        lightbox.classList.remove('visible');
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('visible');
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            lightbox.classList.remove('visible');
+        }
+    });
+</script>
+
+</body>
+</html>
