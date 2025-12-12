@@ -565,6 +565,141 @@ nav li a.active {
             }
         }
 
+          .video-section {
+  padding: clamp(48px, 6vw, 90px) 20px;
+  background:
+    radial-gradient(1200px 500px at 10% -10%, rgba(255,255,255,.08), transparent 60%),
+    radial-gradient(900px 450px at 90% 0%, rgba(255,255,255,.06), transparent 55%),
+    linear-gradient(180deg, #0b1020, #070a12);
+  color: #e9eefc;
+}
+
+.video-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.video-head .kicker {
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: .85;
+  margin: 0 0 10px;
+}
+
+.video-head h2 {
+  font-size: clamp(26px, 3.4vw, 40px);
+  line-height: 1.1;
+  margin: 0 0 10px;
+}
+
+.video-head .sub {
+  max-width: 70ch;
+  opacity: .85;
+  margin: 0 0 26px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 18px;
+}
+
+.video-card {
+  grid-column: span 6;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  backdrop-filter: blur(10px);
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,.18);
+}
+
+.video-frame {
+  position: relative;
+  background: #000;
+}
+
+.vid {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 9;
+}
+
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: radial-gradient(circle at center, rgba(0,0,0,.10), rgba(0,0,0,.55));
+  cursor: pointer;
+  transition: opacity .15s ease, transform .15s ease;
+}
+
+.play-overlay::before {
+  content: "";
+  width: 88px;
+  height: 88px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.16);
+  border: 1px solid rgba(255,255,255,.22);
+  box-shadow: 0 18px 45px rgba(0,0,0,.35);
+  position: absolute;
+}
+
+.play-overlay {
+  font-size: 28px;
+  color: #fff;
+  text-shadow: 0 10px 35px rgba(0,0,0,.55);
+}
+
+.play-overlay:hover { transform: scale(1.02); }
+.play-overlay.hide { opacity: 0; pointer-events: none; }
+
+.video-meta {
+  padding: 16px 16px 18px;
+}
+
+.video-meta h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.video-meta p {
+  margin: 0 0 12px;
+  opacity: .85;
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.14);
+  opacity: .95;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .video-card { grid-column: span 12; }
+}
+
     </style>
 </head>
 <body>
@@ -615,6 +750,69 @@ nav li a.active {
         </div>
     </div>
 </section>
+
+    <section class="video-section" id="video">
+    <div class="video-wrap">
+  
+      <div class="video-grid">
+        <!-- Video 1 -->
+        <article class="video-card">
+          <div class="video-frame">
+            <video
+              class="vid"
+              controls
+              preload="metadata"
+              poster="cover.jpg"
+            >
+              <source src="video1.mp4" type="video/mp4" />
+              Tvoj browser ne podržava video tag.
+            </video>
+  
+            <button class="play-overlay" type="button" aria-label="Play video">
+              ▶
+            </button>
+          </div>
+  
+          <div class="video-meta">
+            <h3>Dio 1 — Uvod</h3>
+            
+            <div class="chips">
+              <span class="chip">MP4</span>
+              <span class="chip">Part 1</span>
+            </div>
+          </div>
+        </article>
+  
+        <!-- Video 2 -->
+        <article class="video-card">
+          <div class="video-frame">
+            <video
+              class="vid"
+              controls
+              preload="metadata"
+              poster="cover.jpg"
+            >
+              <source src="video2.mp4" type="video/mp4" />
+              Tvoj browser ne podržava video tag.
+            </video>
+  
+            <button class="play-overlay" type="button" aria-label="Play video">
+              ▶
+            </button>
+          </div>
+  
+          <div class="video-meta">
+            <h3>Dio 2 — Nastavak</h3>
+           
+            <div class="chips">
+              <span class="chip">MP4</span>
+              <span class="chip">Part 2</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
 <main>
 
@@ -1255,7 +1453,29 @@ Ljudski je nadati se u bolje sjutra.
             lightbox.classList.remove('visible');
         }
     });
+
+
+    document.querySelectorAll(".video-card").forEach((card) => {
+    const video = card.querySelector("video");
+    const btn = card.querySelector(".play-overlay");
+
+    const sync = () => btn.classList.toggle("hide", !video.paused);
+
+    btn.addEventListener("click", () => {
+      if (video.paused) video.play();
+      else video.pause();
+      sync();
+    });
+
+    video.addEventListener("play", sync);
+    video.addEventListener("pause", sync);
+    video.addEventListener("ended", () => {
+      video.currentTime = 0;
+      btn.classList.remove("hide");
+    });
+  });
 </script>
 
 </body>
 </html>
+
